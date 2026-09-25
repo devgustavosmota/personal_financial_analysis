@@ -1,0 +1,16 @@
+{% macro render_form(form) %}
+
+    <form method="post">
+
+        {% for field in form %}
+
+            <div class="field">
+                {{ field.name }}
+                {{ field() }}
+            </div>
+
+        {% endfor %}
+
+    </form>
+
+{% endmacro %}

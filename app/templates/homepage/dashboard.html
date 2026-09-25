@@ -1,0 +1,15 @@
+{% from './macros/render_flashed_messages.html' import render_flashed_messages %}
+{% extends 'base.html' %}
+
+{% block head %}
+
+    {{ super() }}
+    {% block title %}Dashboard{% endblock %}
+
+{% endblock %}
+
+{% block body %}
+
+    {{ render_flashed_messages() }}
+
+{% endblock %}

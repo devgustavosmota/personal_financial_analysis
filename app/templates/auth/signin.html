@@ -1,0 +1,18 @@
+{% from './macros/render_form.html' import render_form %}
+{% from './macros/render_flashed_messages.html' import render_flashed_messages %}
+{% extends 'base.html' %}
+
+{% block head %}
+
+    {{ super() }}
+    {% block title %}Sign In{% endblock %}
+
+{% endblock %}
+
+{% block body %}
+
+    {{ render_flashed_messages() }}
+
+    {{ render_form(form) }}
+
+{% endblock %}
